@@ -1,3 +1,45 @@
+//First you try to solve self trying and open problem text file.If you are not capable to 3-4 hour trying then open this file.
+
+
+/*
+Write a C program to find the eligibility of admission for a professional course based on the following criteria:
+
+Eligibility Criteria : Marks in Maths >=65 and Marks in Phy >=55 and Marks in Chem>=50 and Total in all three subject >=190 or Total in Maths and Physics >=140
+
+Input the marks obtained in Physics :65
+Input the marks obtained in Chemistry :51
+Input the marks obtained in Mathematics :72
+Total marks of Maths, Physics and Chemistry : 188 Total marks of Maths and Physics : 137 The candidate is not eligible.
+Expected Output :
+The candidate is not eligible for admission.
+*/
+#include <stdio.h>
+int main()
+{
+    int maths, physics, chemist, total;
+
+    printf("Enter Student Number : \n");
+    printf("\n 1. Physics Marks :");
+    scanf("%d", &physics);
+    printf("\n 1. Chemistry Marks :");
+    scanf("%d", &chemist);
+    printf("\n 1. Mathematics Marks :");
+    scanf("%d", &maths);
+
+    total = maths + chemist + physics;
+
+    if (maths >= 65 && physics >= 55 && total >= 190 && (maths + physics) >= 140)
+    {
+        printf("The candidate is eligible for admission.");
+    }
+    else
+    {
+        printf("The candidate is not eligible for admission.");
+    }
+}
+
+
+
 /*
  Problem 1 : Write a program in C to display the first 10 natural numbers. 
  - Expected Output : 1 2 3 4 5 6 7 8 9 10;
